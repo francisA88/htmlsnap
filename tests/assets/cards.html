@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beautiful Cards</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #eef4ff, #fef9f2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 28px;
+        max-width: 1400px;
+        width: 100%;
+    }
+
+    .card {
+        height: 340px;
+        border-radius: 28px;
+        padding: 28px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+        transition: transform 0.35s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 14px;
+    }
+
+    p {
+        line-height: 1.6;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+
+    /* CARD 1 — Get Well Soon */
+    .card-1 {
+        background:
+            radial-gradient(circle at top right, #ffd84d, transparent 35%),
+            linear-gradient(135deg, #f8fbff, #dceeff);
+        color: #184d82;
+        border: 3px solid rgba(255, 214, 77, 0.45);
+    }
+
+    .card-1::before {
+        content: "☀";
+        position: absolute;
+        top: 18px;
+        right: 24px;
+        font-size: 4rem;
+        color: rgba(255, 215, 0, 0.35);
+    }
+
+    .card-1::after {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: rgba(173, 216, 255, 0.25);
+        bottom: -60px;
+        left: -50px;
+    }
+
+    /* CARD 2 — Sunset Glow */
+    .card-2 {
+        background: linear-gradient(145deg, #ff9966, #ff5e62);
+        color: white;
+    }
+
+    .card-2::before {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        background: rgba(255,255,255,0.12);
+        border-radius: 50%;
+        top: -80px;
+        right: -80px;
+    }
+
+    /* CARD 3 — Glass Purple */
+    .card-3 {
+        background: rgba(135, 98, 255, 0.18);
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(255,255,255,0.35);
+        color: #fff;
+        background-image: linear-gradient(135deg, #7f5af0, #2cb67d);
+    }
+
+    .card-3::before {
+        content: "✦";
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        font-size: 3rem;
+        opacity: 0.25;
+    }
+
+    /* CARD 4 — Botanical */
+    .card-4 {
+        background: linear-gradient(145deg, #d4fc79, #96e6a1);
+        color: #14532d;
+    }
+
+    .card-4::before {
+        content: "❋";
+        position: absolute;
+        bottom: 18px;
+        right: 18px;
+        font-size: 5rem;
+        opacity: 0.18;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card card-1">
+        <h2>Get Well Soon</h2>
+        <p>
+            Wishing you brighter days ahead, quick healing, and plenty of rest.
+            May each day bring renewed strength, comfort, and a little sunshine.
+        </p>
+    </div>
+
+    <div class="card card-2">
+        <h2>Dream Big</h2>
+        <p>
+            Every sunset carries the promise of a new dawn. Keep moving forward —
+            your brightest chapter is still unfolding.
+        </p>
+    </div>
+
+    <div class="card card-3">
+        <h2>Create Magic</h2>
+        <p>
+            Creativity thrives where imagination meets courage. Build something
+            extraordinary from your ideas.
+        </p>
+    </div>
+
+    <div class="card card-4">
+        <h2>Fresh Beginnings</h2>
+        <p>
+            Growth starts quietly. Like leaves unfolding at sunrise, every small
+            step brings something beautiful into bloom.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
