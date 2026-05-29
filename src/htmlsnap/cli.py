@@ -2,7 +2,7 @@ from pathlib import Path
 import argparse
 import sys
 
-from renderer import render_to_png
+from .renderer import render_to_png
 
 #!/usr/bin/env python3
 """
